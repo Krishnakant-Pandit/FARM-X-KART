@@ -139,6 +139,46 @@ header {
     transform: scale(0.95);
 }
 
+.profile-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border: 2px solid darkgreen;
+    border-radius: 50%;
+    background: white;
+    overflow: hidden;
+    box-sizing: border-box;
+    box-shadow: 0 0 6px green;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+.profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+.profile:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 0 12px green;
+}
+.profile:hover .profile-img {
+    transform: scale(1.04);
+}
+.profile:active {
+    transform: scale(0.97);
+}
+
 .gap {
     padding: 1rem;
 }
