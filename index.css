@@ -46,7 +46,7 @@ header {
     border-radius: 50px;
     box-shadow: 0 0 8px green;
 
-    transform: all 0.1s linear;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, transform 0.25s ease;
 }
 
 .logo-img:hover {
@@ -58,7 +58,7 @@ header {
     font-size: 2rem;
     font-weight: 700;
     text-shadow: 0 0 8px green;
-    transform: all 0.1s linear;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, transform 0.25s ease;
 }
 
 .logo-title:hover {
@@ -78,7 +78,7 @@ header {
     text-shadow: 0 0 10px rgb(9, 80, 9);
     font-size: 1.15rem;
     font-weight: 600;
-    transform: all 0.1s linear;
+    transition:border-color 0.25s ease,box-shadow 0.25s ease, background 0.25s ease,transform 0.25s ease;
 }
 
 .nav-link:hover {
@@ -116,7 +116,7 @@ header {
 
     cursor: pointer;
 
-    transition: all 0.1s linear;
+    transition:border-color 0.25s ease,box-shadow 0.25s ease, background 0.25s ease,transform 0.25s ease;
 }
 
 .signup {
@@ -144,6 +144,7 @@ header {
     justify-content: center;
     align-items: center;
 }
+
 .profile {
     display: flex;
     justify-content: center;
@@ -156,25 +157,27 @@ header {
     overflow: hidden;
     box-sizing: border-box;
     box-shadow: 0 0 6px green;
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+    transition:transform 0.3s ease,box-shadow 0.3s ease;
 }
+
 .profile-img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
     display: block;
-    transition: transform 0.3s ease;
+    transition:border-color 0.25s ease,box-shadow 0.25s ease, background 0.25s ease,transform 0.25s ease;
 }
+
 .profile:hover {
     transform: translateY(-2px) scale(1.05);
     box-shadow: 0 0 12px green;
 }
+
 .profile:hover .profile-img {
     transform: scale(1.04);
 }
+
 .profile:active {
     transform: scale(0.97);
 }
@@ -186,22 +189,16 @@ header {
 .banner-container {
     width: 95%;
     height: 220px;
-
     margin: auto;
-
     overflow: hidden;
-
     border-radius: 15px;
-
     box-shadow: 0 0 10px #ccc;
 }
 
 .banner-slider {
     width: 400%;
     height: 100%;
-
     display: flex;
-
     animation: bannerSlide 24s infinite;
 }
 
@@ -298,10 +295,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-
     box-shadow: 0 0 10px gray;
-
-    transition: all 0.1s linear;
+    transition:border-color 0.25s ease,box-shadow 0.25s ease, background 0.25s ease,transform 0.25s ease;
 }
 
 .welcome-btn:hover {
@@ -384,53 +379,37 @@ header {
 
 .steps-container {
     width: 95%;
-
     margin: 20px auto;
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     flex-wrap: wrap;
-
     gap: 15px;
 }
 
 .step {
     width: 180px;
     height: 180px;
-
     padding: 20px;
-
     text-align: center;
-
     background: white;
-
     border-radius: 15px;
-
     box-shadow: 0 0 8px #ccc;
 }
 
 .step-number {
     width: 45px;
     height: 45px;
-
     margin: auto;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     border-radius: 50%;
-
     background: #2A7B9B;
     background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
 
     color: white;
-
     font-size: 1.3rem;
     font-weight: 600;
     text-shadow: 0 0 5px darkgreen;
@@ -623,34 +602,25 @@ header {
 .input-email {
     width: 80%;
     padding: 12px 14px;
-
     font-family: "Baloo Bhai 2", sans-serif;
     font-size: 1rem;
     color: #333;
-
     background-color: #fff;
-
     border: 1px solid #d1d5db;
     border-radius: 8px;
-
     outline: none;
 
-    transition:
-        border-color 0.2s ease,
-        box-shadow 0.2s ease,
-        transform 0.2s ease;
+    transition:border-color 0.2s ease,box-shadow 0.2s ease,transform 0.2s ease;
 }
+
 .input-name:focus,
 .input-email:focus,
 .input-issue:focus {
     border-color: darkgreen;
-
-    box-shadow:
-        0 0 0 3px rgba(0, 100, 0, 0.12),
-        0 4px 12px rgba(0, 0, 0, 0.08);
-
+    box-shadow:0 0 0 3px rgba(0, 100, 0, 0.12),0 4px 12px rgba(0, 0, 0, 0.08);
     transform: translateY(-1px);
 }
+
 .input-name:hover,
 .input-email:hover,
 .input-issue:hover {
@@ -676,10 +646,7 @@ header {
     border-radius: 8px;
 
     outline: none;
-    transition:
-        border-color 0.2s ease,
-        box-shadow 0.2s ease,
-        transform 0.2s ease;
+    transition:border-color 0.2s ease,box-shadow 0.2s ease,transform 0.2s ease;
 }
 
 .send-msg {
@@ -705,16 +672,16 @@ header {
     transition: all 0.1s ease;
 }
 
-.send-msg:hover{
+.send-msg:hover {
     transform: scale(1.01) translateY(-1px);
-    box-shadow: 0 0 15px gray ;
+    box-shadow: 0 0 15px gray;
 }
-.send-msg:active{
+
+.send-msg:active {
     transform: scale(.97) translateY(1px);
 }
 
-.footer-box{
-
+.footer-box {
     background: #2A7B9B;
     background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
 
@@ -728,13 +695,16 @@ header {
     gap: .4rem;
     padding: .6rem;
 }
-.footer-tittle{
+
+.footer-tittle {
     font-size: 2rem;
     font-weight: 700;
     color: white;
     text-shadow: 0 0 5px darkgreen;
 }
-.footer-description, .footer-copywrite{
+
+.footer-description,
+.footer-copywrite {
     font-size: 1rem;
     font-weight: 400;
     color: white;

@@ -1,12 +1,150 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Signup | FARM X KART</title>
+
+    <link rel="stylesheet" href="signup.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Ole&family=Playwrite+GB+J:ital,wght@0,100..400;1,100..400&family=Playwrite+ID:wght@100..400&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    <h1>This is a Signup page</h1>
-    Under Development
+
+    <div class="signup-container">
+        <div class="signup-box">
+            <div class="signup-title">
+                Signup
+            </div>
+            <form class="signup-input">
+                <input
+                    type="text"
+                    placeholder="Name"
+                    class="input"
+                    required
+                >
+                <div class="input-option">
+                    <div class="option-title">
+                        Gender
+                    </div>
+                    <div class="option">
+                        <label>
+                            <input
+                                type="radio"
+                                name="gender"
+                                value="male"
+                                class="option-checkbox"
+                                required
+                            >
+                            Male
+                        </label>
+                        <label>
+                            <input
+                                type="radio"
+                                name="gender"
+                                value="female"
+                                class="option-checkbox"
+                            >
+                            Female
+                        </label>
+                        <label>
+                            <input
+                                type="radio"
+                                name="gender"
+                                value="others"
+                                class="option-checkbox"
+                            >
+                            Others
+                        </label>
+                    </div>
+                </div>
+                <input
+                    type="email"
+                    placeholder="Email"
+                    class="input"
+                    required
+                >
+                <input
+                    type="tel"
+                    placeholder="Mobile Number"
+                    class="input"
+                    maxlength="10"
+                    pattern="[0-9]{10}"
+                    required
+                >
+                <div class="input-option">
+                    <div class="option-title">
+                        Account Type
+                    </div>
+                    <div class="option">
+                        <label>
+                            <input
+                                type="radio"
+                                name="accountType"
+                                value="customer"
+                                class="option-checkbox"
+                                required
+                            >
+                            Customer
+                        </label>
+                        <label>
+                            <input
+                                type="radio"
+                                name="accountType"
+                                value="farmer"
+                                class="option-checkbox"
+                            >
+                            Farmer
+                        </label>
+                    </div>
+                </div>
+                <input
+                    type="password"
+                    class="input"
+                    placeholder="Password"
+                    minlength="8"
+                    required
+                >
+                <input
+                    type="password"
+                    class="input"
+                    placeholder="Confirm Password"
+                    minlength="8"
+                    required
+                >
+                <label class="terms">
+                    <input
+                        type="checkbox"
+                        required
+                    >
+                    I agree to the Terms & Conditions
+                </label>
+                <a href="./login.html" class="login-link">
+                    Already registered? Login
+                </a>
+                <div class="button">
+                    <button
+                        type="submit"
+                        class="signup-btn">
+                        Signup
+                    </button>
+                    <a
+                        href="./index.html"
+                        class="cancel-btn">
+                        Cancel
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
