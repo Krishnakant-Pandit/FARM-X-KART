@@ -32,9 +32,10 @@ header {
 }
 
 .logo-container {
+    width: 30%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: start;
     align-items: center;
     gap: 1rem;
 }
@@ -66,6 +67,7 @@ header {
 }
 
 .nav-conatiner {
+    width: 40%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -89,6 +91,15 @@ header {
 
 .nav-link:active {
     transform: scale(0.98);
+}
+
+.login-profile{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    gap: 2rem;
 }
 
 .login-box {

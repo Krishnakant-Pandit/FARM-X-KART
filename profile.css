@@ -1,0 +1,203 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Baloo Bhai 2", sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background: linear-gradient(135deg,#2a7b9b 0%,#57c785 50%,#eddd53 100%);
+}
+
+.profile-box {
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    width: 800px;
+    min-height: 400px;
+    padding: 45px;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 28px;
+    box-shadow:0 20px 50px rgba(0, 70, 40, 0.25),0 0 20px rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.profile-box:hover {
+    transform: translateY(-6px);
+    box-shadow:0 25px 60px rgba(0, 70, 40, 0.3),0 0 25px rgba(255, 255, 255, 0.4);
+}
+
+.profile-head {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.profile-img {
+    width: 210px;
+    height: 210px;
+    flex-shrink: 0;
+    padding: 5px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2a7b9b,#57c785,#eddd53);
+    box-shadow: 0 8px 25px rgba(0, 100, 50, 0.25);
+    transition: all 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.04);
+    box-shadow:0 10px 30px rgba(0, 100, 50, 0.35),0 0 15px rgba(87, 199, 133, 0.6);
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid white;
+}
+.profile-info {
+    flex: 1;
+}
+
+.name {
+    font-size: 42px;
+    font-weight: 700;
+    color: #14532d;
+    margin-bottom: 18px;
+    line-height: 1.1;
+}
+
+.email,
+.phone,
+.Acc-type {
+    font-size: 19px;
+    font-weight: 500;
+    color: #31505a;
+    margin: 9px 0;
+    letter-spacing: 0.2px;
+}
+.email span,
+.phone span,
+.Acc-type span {
+    display: inline-block;
+    width: 75px;
+
+    font-weight: 700;
+    color: #14532d;
+}
+
+.email::first-line,
+.phone::first-line,
+.Acc-type::first-line {
+    font-weight: 600;
+}
+
+.Buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.edit-btn,
+.logout-btn {
+    width: 135px;
+    height: 45px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.edit-btn {
+    border: none;
+    background: linear-gradient(90deg, #2a7b9b, #57c785);
+    color: white;
+    box-shadow: 0 6px 15px rgba(42, 123, 155, 0.3);
+}
+
+.edit-btn:hover {
+    transform: translateY(-2px);
+    font-weight: 700;
+    box-shadow:0 8px 20px rgba(42, 123, 155, 0.4);
+}
+.edit-btn:active {
+    transform: scale(0.97);
+}
+
+.logout-btn {
+    text-decoration: none;
+    border: 2px solid #dc2626;
+    background: white;
+    color: #dc2626;
+}
+
+.logout-btn:hover {
+    background: #dc2626;
+    color: white;
+    font-weight: 750;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(220, 38, 38, 0.25);
+}
+
+.logout-btn:active {
+    transform: scale(0.97);
+}
+
+.profile-foot {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 30px;
+}
+
+.other-btn {
+    width: 25%;
+    height: 45px;
+
+    border-radius: 100px;
+    border: 2px solid darkgreen;
+
+    color: darkgreen;
+    background-color: white;
+
+    font-weight: 600;
+    font-size: 1rem;
+
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 100, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.other-btn:hover {
+    background-color: darkgreen;
+    color: white;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(0, 100, 0, 0.4);
+    transform: translateY(-3px);
+}
+
+.other-btn:active {
+    transform: translateY(0) scale(0.97);
+    box-shadow: 0 3px 7px rgba(0, 100, 0, 0.25);
+}
+.other-btn:active {
+    transform: scale(0.97);
+}
