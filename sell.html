@@ -1,11 +1,120 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sell</title>
+    <meta name="description" content="Sell your farm products directly to customers through Farm X Kart">
+    <title>Sell Products | Farm X Kart</title>
+
+    <link rel="stylesheet" href="sell.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
-    <h1>Sell page Under Development</h1>
+    <main class="sell-box">
+
+        <header class="sell-header">
+            <h1 class="sell-title">Sell Your Products</h1>
+        </header>
+
+        <form class="sell-input" id="sellForm">
+
+            <div class="input-box">
+                <label for="productName" class="input-title">
+                    Product Name
+                </label>
+
+                <input type="text" id="productName" name="productName" class="input" placeholder="Enter product name"
+                    autocomplete="off" required>
+            </div>
+
+            <div class="input-box">
+                <label for="productImage" class="input-title">
+                    Upload Image
+                </label>
+                <input type="file" id="productImage" name="productImage" class="upload-pic" accept="image/*" required>
+            </div>
+            <div class="input-box">
+                <label for="category" class="input-title">
+                    Category
+                </label>
+                <select id="category" name="category" class="category" required>
+                    <option value="" disabled selected>
+                        Select Category
+                    </option>
+                    <option value="vegetables">Vegetables</option>
+                    <option value="fruits">Fruits</option>
+                    <option value="pulses">Pulses</option>
+                    <option value="spices">Spices</option>
+                </select>
+            </div>
+
+            <div class="input-box">
+                <label for="description" class="input-title">
+                    Product Description
+                </label>
+                <textarea id="description" name="description" class="sell-description"
+                    placeholder="Describe your product..." maxlength="500" required></textarea>
+            </div>
+
+            <div class="input-box">
+                <label class="input-title">
+                    Quantity
+                </label>
+                <div class="quantity-box">
+                    <input type="number" id="quantity" name="quantity" class="qty-input" placeholder="Enter quantity"
+                        min="0.1" step="0.1" required>
+
+                    <select id="quantityUnit" name="quantityUnit" class="qty-unit" required>
+                        <option value="" disabled selected>
+                            Unit
+                        </option>
+                        <option value="gram">Grams</option>
+                        <option value="kg">Kg</option>
+                        <option value="quintal">Quintal</option>
+                        <option value="piece">Piece</option>
+                        <option value="dozen">Dozen</option>
+                        <option value="litre">Litre</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <label for="harvestDate" class="input-title">
+                    Harvest Date
+                </label>
+                <input type="date" id="harvestDate" name="harvestDate" class="harvest-date" required>
+            </div>
+
+            <div class="input-box">
+                <label for="expectedPrice" class="input-title">
+                    Expected Price
+                </label>
+                <div class="price-box">
+                    <span class="currency">₹</span>
+
+                    <input type="number" id="expectedPrice" name="expectedPrice" class="price-input"
+                        placeholder="Enter expected price" min="1" step="0.01" required>
+                </div>
+            </div>
+
+            <div class="button">
+                <button type="submit" class="submit" id="submitProduct">
+                    List Product
+                </button>
+
+                <a href="./product.html" class="cancel-btn" id="cancelProduct">
+                    Cancel
+                </a>
+            </div>
+        </form>
+    </main>
 </body>
+
 </html>

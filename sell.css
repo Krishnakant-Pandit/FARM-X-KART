@@ -1,0 +1,282 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Baloo Bhai 2", sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 15px;
+
+    background-image: url("./images/login-background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.sell-box {
+    width: 470px;
+    max-width: 100%;
+    padding: 30px 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 22px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), 0 0 20px rgba(255, 255, 255, 0.12);
+    position: relative;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+}
+
+.sell-box:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.3), 0 0 25px rgba(255, 255, 255, 0.15);
+}
+
+.sell-header {
+    text-align: center;
+}
+
+.sell-title {
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    text-shadow: 0 0 5px aqua, 0 0 12px rgba(0, 255, 255, 0.4);
+    transition: text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.sell-title:hover {
+    transform: translateY(-2px);
+    text-shadow: 0 0 7px aqua, 0 0 18px rgba(0, 255, 255, 0.7);
+}
+
+
+.sell-input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.input-box {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.input-box:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.12);
+}
+
+.input-title {
+    display: block;
+    margin-bottom: 5px;
+    color: #222;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.input,
+.category,
+.qty-input,
+.qty-unit,
+.price-input,
+.harvest-date {
+    width: 100%;
+    height: 38px;
+    padding: 5px 12px;
+    border: 1px solid #aaa;
+    border-radius: 50px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.85);
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, transform 0.2s ease;
+}
+
+.input:focus,
+.category:focus,
+.qty-input:focus,
+.qty-unit:focus,
+.price-input:focus,
+.harvest-date:focus,
+.sell-description:focus {
+    border-color: darkgreen;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(0, 100, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.upload-pic {
+    width: 100%;
+    padding: 7px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.upload-pic:hover {
+    background: white;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+
+}
+
+.category {
+    cursor: pointer;
+}
+
+.sell-description {
+    width: 100%;
+    height: 90px;
+    padding: 8px 12px;
+    resize: vertical;
+    border: 1px solid #aaa;
+    border-radius: 15px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.85);
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.quantity-box {
+    display: flex;
+    gap: 7px;
+}
+
+.qty-input {
+    width: 60%;
+}
+
+.qty-unit {
+    flex: 1;
+    cursor: pointer;
+}
+
+.price-box {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+
+    background: rgba(255, 255, 255, 0.85);
+
+    border-radius: 50px;
+
+    padding-left: 12px;
+
+    transition:
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+
+}
+
+.currency {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.price-input {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+}
+
+.price-input:focus {
+    box-shadow: none;
+    background: transparent;
+}
+
+.harvest-date {
+    cursor: pointer;
+}
+
+.button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.button a,
+.button button {
+    flex: 1;
+    height: 42px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50px;
+    text-decoration: none;
+
+    font-family: "Baloo Bhai 2", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.submit {
+    color: white;
+    background: linear-gradient( 90deg,rgba(42, 123, 155, 1) 0%,rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+
+    border: none;
+    box-shadow: 0 0 10px darkgreen;
+}
+
+.submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(0, 100, 0, 0.35);
+}
+
+.submit:active {
+    transform: translateY(1px) scale(0.97);
+    box-shadow: 0 2px 5px rgba(0, 100, 0, 0.25);
+}
+
+.cancel-btn {
+    color: #333;
+    background: rgba(255, 255, 255, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.cancel-btn:hover {
+    color: #b00020;
+    background: rgba(255, 255, 255, 0.9);
+    border-color: #b00020;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cancel-btn:active {
+    transform: translateY(1px) scale(0.97);
+}
