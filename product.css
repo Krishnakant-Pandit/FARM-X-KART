@@ -261,16 +261,24 @@ nav {
 }
 .product-title{
     width: 95%;
+    height: 48px;
+
+    margin: auto;
+
     display: flex;
+    align-items: center;
     justify-content: center;
+
+    border-radius: 15px;
+
+    color: white;
+
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-shadow: 0 0 3px darkgreen;
+
     background: #2A7B9B;
     background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
-    padding: 10px;
-    border-radius: 50px;
-    font-size: 1.5rem;
-    color: white;
-    font-weight: 600;
-    text-shadow: 0 0 5px darkgreen;
 }
 .card-container {
     width: 100%;
