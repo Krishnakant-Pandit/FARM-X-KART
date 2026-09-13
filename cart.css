@@ -15,6 +15,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #ffffff;
 }
 
 header {
@@ -23,14 +24,18 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%,rgba(237, 221, 83, 1) 100%);
+    background: linear-gradient(
+        90deg,
+        rgba(42, 123, 155, 1) 0%,
+        rgba(87, 199, 133, 1) 50%,
+        rgba(237, 221, 83, 1) 100%
+    );
 }
 
 .head-box {
     width: 95%;
     min-height: 80px;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
@@ -38,7 +43,6 @@ header {
 .logo-container {
     width: 35%;
     display: flex;
-    flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     gap: 1rem;
@@ -53,7 +57,7 @@ header {
 }
 
 .logo-img:hover {
-    transform: scale(1.02);
+    transform: scale(1.05);
 }
 
 .logo-title {
@@ -71,7 +75,6 @@ header {
 .nav-container {
     width: 30%;
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     gap: 2rem;
@@ -83,23 +86,24 @@ header {
     text-shadow: 0 0 10px rgb(9, 80, 9);
     font-size: 1.15rem;
     font-weight: 600;
-    transition: text-shadow 0.25s ease, transform 0.25s ease, color 0.25s ease;
+    transition: text-shadow 0.25s ease,
+        transform 0.25s ease,
+        color 0.25s ease;
 }
 
 .nav-link:hover {
-    transform: scale(1.02) translateY(-1px);
+    transform: scale(1.05) translateY(-1px);
     text-shadow: 0 0 20px rgb(9, 71, 9);
     color: aqua;
 }
 
 .nav-link:active {
-    transform: scale(0.98);
+    transform: scale(0.95);
 }
 
 .login-profile {
     width: 35%;
     display: flex;
-    flex-direction: row;
     justify-content: flex-end;
     align-items: center;
     gap: 2rem;
@@ -128,7 +132,9 @@ header {
     min-height: 40px;
     box-shadow: 0 0 8px rgb(8, 79, 8);
     cursor: pointer;
-    transition: background-color 0.25s ease, transform 0.25s ease;
+    transition: background-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 .signup {
@@ -137,17 +143,19 @@ header {
 
 .login:hover {
     background-color: rgb(25, 25, 204);
-    transform: scale(1.02) translateY(-1px);
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0, 0, 80, 0.3);
 }
 
 .signup:hover {
     background-color: rgb(203, 5, 5);
-    transform: scale(1.02) translateY(-1px);
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 5px 12px rgba(100, 0, 0, 0.3);
 }
 
 .login:active,
 .signup:active {
-    transform: scale(0.95);
+    transform: scale(0.94);
 }
 
 .profile-box {
@@ -167,7 +175,8 @@ header {
     background: white;
     overflow: hidden;
     box-shadow: 0 0 6px green;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .profile-img {
@@ -212,47 +221,274 @@ main {
 .cart-title {
     width: 95%;
     height: 48px;
-
-    margin: auto;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 15px;
-
     color: white;
-
     font-size: 1.3rem;
     font-weight: 600;
     text-shadow: 0 0 3px darkgreen;
-
-    background: #2A7B9B;
-    background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+    background: linear-gradient(
+        90deg,
+        rgba(42, 123, 155, 1) 0%,
+        rgba(87, 199, 133, 1) 50%,
+        rgba(237, 221, 83, 1) 100%
+    );
 }
 
-.cart-box {
+.cart-container {
+    width: 95%;
+    margin: auto;
+}
+
+.cart-content {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 25px;
+    align-items: start;
+}
+
+.cart-items {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cart-item {
     width: 100%;
-    min-height: 300px;
+    min-height: 150px;
+    display: grid;
+    grid-template-columns: 130px 1fr auto;
+    align-items: center;
+    gap: 20px;
+    padding: 18px;
+    background: white;
+    border: 1px solid rgba(0, 100, 0, 0.15);
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 100, 0, 0.12);
+    transition: transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.cart-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 100, 0, 0.18);
+}
+
+.cart-item-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    display: block;
+    flex-shrink: 0;
+}
+.cart-item-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.cart-item-name {
+    color: darkgreen;
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.cart-item-price {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.cart-item-unit {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.quantity-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.quantity-btn {
+    width: 34px;
+    height: 34px;
+    border: 2px solid darkgreen;
+    border-radius: 8px;
+    background: white;
+    color: darkgreen;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.quantity-btn:hover {
+    background-color: darkgreen;
+    color: white;
+    transform: scale(1.08);
+}
+
+.quantity-btn:active {
+    transform: scale(0.9);
+}
+
+.quantity {
+    min-width: 35px;
+    text-align: center;
+    color: darkgreen;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.cart-item-right {
+    min-width: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+.item-total {
+    color: darkgreen;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.remove-btn {
+    border: none;
+    background: transparent;
+    color: red;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.remove-btn:hover {
+    color: darkred;
+    transform: scale(1.05);
+}
+
+.remove-btn:active {
+    transform: scale(0.9);
+}
+
+.cart-summary {
+    position: sticky;
+    top: 20px;
+    padding: 22px;
+    border-radius: 15px;
+    background: white;
+    border: 1px solid rgba(0, 100, 0, 0.15);
+    box-shadow: 0 0 12px rgba(0, 100, 0, 0.15);
+}
+
+.summary-title {
+    color: darkgreen;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0;
+    color: #444;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.summary-line {
+    width: 100%;
+    height: 1px;
+    margin: 15px 0;
+    background-color: rgba(0, 100, 0, 0.2);
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: darkgreen;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.checkout-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border: 2px solid darkgreen;
+    border-radius: 10px;
+    background-color: darkgreen;
+    color: white;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.checkout-btn:hover {
+    background-color: white;
+    color: darkgreen;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 100, 0, 0.25);
+}
+
+.checkout-btn:active {
+    transform: scale(0.95);
 }
 
 .cart-empty {
+    min-height: 300px;
     display: flex;
-    width: 95%;
-    min-height: 250px;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
     color: darkgreen;
     font-size: 1.5rem;
     font-weight: 500;
     text-align: center;
 }
 
+.shop-now {
+    text-decoration: none;
+    border: 2px solid green;
+    color: darkgreen;
+    font-weight: 600;
+    padding: 8px 20px;
+    border-radius: 100px;
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.25);
+    transition: all 0.3s ease;
+}
+
+.shop-now:hover {
+    background-color: darkgreen;
+    color: white;
+    transform: scale(1.05) translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 100, 0, 0.3);
+}
+
+.shop-now:active {
+    transform: scale(0.95) translateY(1px);
+}
+
 .footer-box {
-    background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%,rgba(87, 199, 133, 1) 50%,rgba(237, 221, 83, 1) 100%);
+    background: linear-gradient(
+        90deg,
+        rgba(42, 123, 155, 1) 0%,
+        rgba(87, 199, 133, 1) 50%,
+        rgba(237, 221, 83, 1) 100%
+    );
     display: flex;
     flex-direction: column;
     align-items: center;

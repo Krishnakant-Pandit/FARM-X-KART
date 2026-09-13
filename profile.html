@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
+
     <link rel="stylesheet" href="profile.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -15,51 +17,75 @@
 </head>
 
 <body>
+
     <div class="profile-box">
+
         <div class="profile-head">
+
             <div class="profile-img">
                 <img src="./images/profilepic.jpg" alt="profile pic" class="profile-pic">
             </div>
+
             <div class="profile-info">
-                <div class="name">
-                    Krishnakant Pandit
+
+                <div class="name" id="profile-name">
+                    Loading...
                 </div>
+
                 <div class="email">
                     <span>Email</span>
-                    krishnakantpandit@gmail.com
+                    <span id="profile-email">Loading...</span>
                 </div>
+
                 <div class="phone">
                     <span>Phone</span>
-                    +91 9934555915
+                    <span id="profile-mobile">Loading...</span>
                 </div>
 
                 <div class="Acc-type">
                     <span>Account</span>
-                    Customer
+                    <span id="profile-account">Loading...</span>
                 </div>
+
                 <div class="Buttons">
-                    <button class="edit-btn">
+
+                    <button class="edit-btn" id="edit-profile">
                         Edit Profile
                     </button>
-                    <a href="./index.html" class="logout-btn">Logout</a>
+
+                    <button class="logout-btn" id="logout">
+                        Logout
+                    </button>
+
                 </div>
+
             </div>
         </div>
+
         <div class="profile-foot">
-            <a href="" class="other-btn">
-                My Orders 
+
+            <a href="./orders.html" class="other-btn">
+                My Orders
             </a>
-            <a  href="./cart.html" class="other-btn">
+
+            <a href="./cart.html" class="other-btn">
                 My Cart
             </a>
-            <a href="" class="other-btn">
-               Change Address
+
+            <a href="./address.html" class="other-btn">
+                Change Address
             </a>
-            <a href="" class="other-btn">
-                Account Settings 
+
+            <a href="./settings.html" class="other-btn">
+                Account Settings
             </a>
+
         </div>
+
     </div>
+
+    <script src="script.js"></script>
+
 </body>
 
 </html>

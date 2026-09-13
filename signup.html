@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,125 +25,67 @@
                 Signup
             </div>
             <form class="signup-input">
-                <input
-                    type="text"
-                    placeholder="Name"
-                    class="input"
-                    required
-                >
+                <input type="text" name="name" placeholder="Name" class="input" required>
+
                 <div class="input-option">
-                    <div class="option-title">
-                        Gender
-                    </div>
+                    <div class="option-title">Gender</div>
                     <div class="option">
                         <label>
-                            <input
-                                type="radio"
-                                name="gender"
-                                value="male"
-                                class="option-checkbox"
-                                required
-                            >
+                            <input type="radio" name="gender" value="male" required>
                             Male
                         </label>
                         <label>
-                            <input
-                                type="radio"
-                                name="gender"
-                                value="female"
-                                class="option-checkbox"
-                            >
+                            <input type="radio" name="gender" value="female">
                             Female
                         </label>
                         <label>
-                            <input
-                                type="radio"
-                                name="gender"
-                                value="others"
-                                class="option-checkbox"
-                            >
+                            <input type="radio" name="gender" value="others">
                             Others
                         </label>
                     </div>
                 </div>
-                <input
-                    type="email"
-                    placeholder="Email"
-                    class="input"
-                    required
-                >
-                <input
-                    type="tel"
-                    placeholder="Mobile Number"
-                    class="input"
-                    maxlength="10"
-                    pattern="[0-9]{10}"
-                    required
-                >
+
+                <input type="email" name="email" placeholder="Email" class="input" required>
+
+                <input type="tel" name="mobile" placeholder="Mobile Number" class="input" maxlength="10"
+                    pattern="[0-9]{10}" required>
+
                 <div class="input-option">
-                    <div class="option-title">
-                        Account Type
-                    </div>
+                    <div class="option-title">Account Type</div>
                     <div class="option">
                         <label>
-                            <input
-                                type="radio"
-                                name="accountType"
-                                value="customer"
-                                class="option-checkbox"
-                                required
-                            >
+                            <input type="radio" name="accountType" value="customer" required>
                             Customer
                         </label>
                         <label>
-                            <input
-                                type="radio"
-                                name="accountType"
-                                value="farmer"
-                                class="option-checkbox"
-                            >
+                            <input type="radio" name="accountType" value="farmer">
                             Farmer
                         </label>
                     </div>
                 </div>
-                <input
-                    type="password"
-                    class="input"
-                    placeholder="Password"
-                    minlength="8"
-                    required
-                >
-                <input
-                    type="password"
-                    class="input"
-                    placeholder="Confirm Password"
-                    minlength="8"
-                    required
-                >
+
+                <input type="password" name="password" class="input" placeholder="Password" minlength="8" required>
+
+                <input type="password" name="confirmPassword" class="input" placeholder="Confirm Password" minlength="8"
+                    required>
+
                 <label class="terms">
-                    <input
-                        type="checkbox"
-                        required
-                    >
+                    <input type="checkbox" name="terms" required>
                     I agree to the Terms & Conditions
                 </label>
+
                 <a href="./login.html" class="login-link">
                     Already registered? Login
                 </a>
+
                 <div class="button">
-                    <button
-                        type="submit"
-                        class="signup-btn">
-                        Signup
-                    </button>
-                    <a
-                        href="./index.html"
-                        class="cancel-btn">
-                        Cancel
-                    </a>
+                    <button type="submit" class="signup-btn">Signup</button>
+                    <a href="./index.html" class="cancel-btn">Cancel</a>
                 </div>
             </form>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
+
 </html>
