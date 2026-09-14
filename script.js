@@ -455,6 +455,15 @@ const checkoutButton = document.getElementById("checkout-btn");
 
 if (checkoutButton) {
     checkoutButton.addEventListener("click", function () {
+        const loginFlag = localStorage.getItem("loginFlag") || "0";
+        const currentUser = localStorage.getItem("currentUser");
+
+        if (loginFlag === "0" || !currentUser) {
+            alert("Please login first to proceed to checkout!");
+            window.location.href = "./login.html";
+            return;
+        }
+
         if (cart.length === 0) {
             alert("Your cart is empty!");
             return;
@@ -702,6 +711,16 @@ if (checkoutForm) {
     checkoutForm.addEventListener("submit", function (event) {
         event.preventDefault();
 
+        // Check if user is logged in before placing order
+        const loginFlag = localStorage.getItem("loginFlag") || "0";
+        const currentUser = localStorage.getItem("currentUser");
+
+        if (loginFlag === "0" || !currentUser) {
+            alert("Please login first to place an order!");
+            window.location.href = "./login.html";
+            return;
+        }
+
         if (checkoutCart.length === 0) {
             alert("Your cart is empty!");
             return;
@@ -886,7 +905,6 @@ function displayOrders() {
                 <div class="order-total">
                     Total: ₹${order.total}
                 </div>
-
             </div>
         `;
         ordersContainer.appendChild(orderCard);
