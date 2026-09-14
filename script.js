@@ -633,7 +633,6 @@ function displayCheckout() {
         checkoutItem.className = "checkout-item";
 
         checkoutItem.innerHTML = `
-<img src="${item.image}" alt="${item.name}" class="checkout-item-image" loading="lazy">
 <div class="checkout-item-details">
 <div class="checkout-item-name">${item.name}</div>
 <div class="checkout-item-price">${item.priceText}</div>
@@ -783,3 +782,114 @@ if (checkoutForm) {
 
 displayCheckout();
 loadUserDetails();
+
+const emptyOrder = document.getElementById("empty-order");
+const ordersContainer = document.getElementById("orders-container");
+
+function displayOrders() {
+    if (!emptyOrder || !ordersContainer) {
+        return;
+    }
+    ordersContainer.innerHTML = "";
+    const savedOrders = JSON.parse(localStorage.getItem("orders")) || [];
+    if (savedOrders.length === 0) {
+        emptyOrder.style.display = "flex";
+        ordersContainer.style.display = "none";
+        return;
+    }
+
+    emptyOrder.style.display = "none";
+    ordersContainer.style.display = "flex";
+    savedOrders.slice().reverse().forEach(function (order) {
+        const orderCard = document.createElement("div");
+        orderCard.className = "order-card";
+        let itemsHTML = "";
+        order.items.forEach(function (item) {
+            itemsHTML += `
+                <div class="order-item">
+                    <div class="order-item-left">
+                        <div>
+                            <div class="order-item-name">
+                                ${item.name}
+                            </div>
+                            <div class="order-item-quantity">
+                                Quantity: ${item.quantity}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-item-right">
+                        <div class="order-item-price">
+                            ₹${item.price * item.quantity}
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+        orderCard.innerHTML = `
+            <div class="order-header">
+                <div>
+                    <div class="order-id">
+                        Order ID: ${order.orderId}
+                    </div>
+                    <div class="order-date">
+                        ${order.date}
+                    </div>
+                </div>
+                <div class="order-status">
+                    ${order.status}
+                </div>
+            </div>
+            <div class="order-items">
+                ${itemsHTML}
+            </div>
+            <div class="order-details">
+                <div class="order-detail">
+                    <strong>Name:</strong>
+                    ${order.customer.name}
+                </div>
+                <div class="order-detail">
+                    <strong>Mobile:</strong>
+                    +91 ${order.customer.mobile}
+                </div>
+                <div class="order-detail">
+                    <strong>Address:</strong>
+                    ${order.customer.address}
+                </div>
+                <div class="order-detail">
+                    <strong>City:</strong>
+                    ${order.customer.city}
+                </div>
+                <div class="order-detail">
+                    <strong>State:</strong>
+                    ${order.customer.state}
+                </div>
+                <div class="order-detail">
+                    <strong>PIN Code:</strong>
+                    ${order.customer.pincode}
+                </div>
+                <div class="order-detail">
+                    <strong>Payment:</strong>
+                    ${order.payment}
+                </div>
+                <div class="order-detail">
+                    <strong>Total Items:</strong>
+                    ${order.totalItems}
+                </div>
+            </div>
+            <div class="order-summary">
+                <div>
+                    Subtotal: ₹${order.subtotal}
+                </div>
+                <div>
+                    Delivery: ₹${order.delivery}
+                </div>
+                <div class="order-total">
+                    Total: ₹${order.total}
+                </div>
+
+            </div>
+        `;
+        ordersContainer.appendChild(orderCard);
+    });
+}
+displayOrders();

@@ -205,3 +205,261 @@ body {
 .other-btn:active {
     transform: scale(0.97);
 }
+
+@media (max-width: 900px) {
+    body {
+        padding: 25px;
+    }
+
+    .profile-box {
+        width: 100%;
+        max-width: 800px;
+        padding: 35px;
+    }
+
+    .profile-head {
+        gap: 35px;
+    }
+
+    .profile-img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .name {
+        font-size: 36px;
+    }
+
+    .email,
+    .phone,
+    .Acc-type {
+        font-size: 17px;
+    }
+
+    .other-btn {
+        width: 25%;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 20px;
+        align-items: flex-start;
+        padding-top: 30px;
+    }
+
+    .profile-box {
+        width: 100%;
+        padding: 30px 25px;
+        gap: 1.5rem;
+        border-radius: 22px;
+    }
+
+    .profile-head {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .profile-img {
+        width: 170px;
+        height: 170px;
+    }
+
+    .profile-info {
+        width: 100%;
+    }
+
+    .name {
+        font-size: 34px;
+        margin-bottom: 15px;
+    }
+
+    .email,
+    .phone,
+    .Acc-type {
+        font-size: 17px;
+        margin: 8px 0;
+        text-align: left;
+    }
+
+    .email span,
+    .phone span,
+    .Acc-type span {
+        width: 75px;
+    }
+
+    .Buttons {
+        justify-content: center;
+        margin-top: 22px;
+    }
+
+    .profile-foot {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-top: 15px;
+    }
+
+    .other-btn {
+        width: 100%;
+        height: 45px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        padding: 15px;
+        padding-top: 20px;
+    }
+
+    .profile-box {
+        padding: 25px 18px;
+        gap: 1.3rem;
+        border-radius: 20px;
+    }
+
+    .profile-img {
+        width: 145px;
+        height: 145px;
+    }
+
+    .profile-pic {
+        border-width: 3px;
+    }
+
+    .name {
+        font-size: 29px;
+        margin-bottom: 13px;
+    }
+
+    .email,
+    .phone,
+    .Acc-type {
+        font-size: 15px;
+        margin: 7px 0;
+    }
+
+    .email span,
+    .phone span,
+    .Acc-type span {
+        width: 65px;
+    }
+
+    .Buttons {
+        gap: 10px;
+        margin-top: 18px;
+    }
+
+    .edit-btn,
+    .logout-btn {
+        width: 120px;
+        height: 42px;
+        font-size: 15px;
+    }
+
+    .profile-foot {
+        gap: 10px;
+    }
+
+    .other-btn {
+        height: 42px;
+        font-size: 0.82rem;
+        padding: 5px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 360px) {
+    body {
+        padding: 10px;
+        padding-top: 15px;
+    }
+
+    .profile-box {
+        padding: 22px 14px;
+        border-radius: 18px;
+    }
+
+    .profile-img {
+        width: 125px;
+        height: 125px;
+    }
+
+    .name {
+        font-size: 25px;
+    }
+
+    .email,
+    .phone,
+    .Acc-type {
+        font-size: 14px;
+    }
+
+    .email span,
+    .phone span,
+    .Acc-type span {
+        width: 60px;
+    }
+
+    .Buttons {
+        gap: 8px;
+    }
+
+    .edit-btn,
+    .logout-btn {
+        width: 110px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .profile-foot {
+        grid-template-columns: 1fr;
+        gap: 9px;
+    }
+
+    .other-btn {
+        width: 100%;
+        height: 40px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 280px) {
+    .profile-box {
+        padding: 18px 10px;
+    }
+
+    .profile-img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .name {
+        font-size: 22px;
+    }
+
+    .email,
+    .phone,
+    .Acc-type {
+        font-size: 13px;
+    }
+
+    .email span,
+    .phone span,
+    .Acc-type span {
+        width: 55px;
+    }
+
+    .Buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .edit-btn,
+    .logout-btn {
+        width: 100%;
+    }
+}

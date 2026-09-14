@@ -229,12 +229,7 @@ main {
     font-size: 1.3rem;
     font-weight: 600;
     text-shadow: 0 0 3px darkgreen;
-    background: linear-gradient(
-        90deg,
-        rgba(42, 123, 155, 1) 0%,
-        rgba(87, 199, 133, 1) 50%,
-        rgba(237, 221, 83, 1) 100%
-    );
+    background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%,rgba(87, 199, 133, 1) 50%,rgba(237, 221, 83, 1) 100%);
 }
 
 .cart-container {
@@ -512,4 +507,420 @@ main {
     font-weight: 400;
     color: white;
     text-shadow: 0 0 5px darkgreen;
+}
+
+@media (max-width: 1100px) {
+    .head-box {
+        width: 94%;
+    }
+    .logo-container {
+        width: 30%;
+    }
+    .nav-container {
+        width: 35%;
+        gap: 1rem;
+    }
+    .login-profile {
+        width: 35%;
+        gap: 1rem;
+    }
+    .cart-content {
+        grid-template-columns: 1fr 300px;
+        gap: 20px;
+    }
+    .cart-item {
+        grid-template-columns: 110px 1fr auto;
+        gap: 15px;
+    }
+    .cart-item-image {
+        width: 100px;
+        height: 100px;
+    }
+    .cart-item-name {
+        font-size: 1.2rem;
+    }
+}
+
+
+@media (max-width: 850px) {
+
+    header {
+        min-height: auto;
+    }
+    .head-box {
+        width: 94%;
+        min-height: 75px;
+        padding: 8px 0;
+    }
+    .logo-container {
+        width: 30%;
+        gap: 0.6rem;
+    }
+    .logo-img {
+        width: 52px;
+        height: 52px;
+    }
+    .logo-title {
+        font-size: 1.5rem;
+    }
+    .nav-container {
+        width: 35%;
+        gap: 0.8rem;
+    }
+    .nav-link {
+        font-size: 1rem;
+    }
+    .login-profile {
+        width: 35%;
+        gap: 0.7rem;
+    }
+    .login-box {
+        gap: 0.5rem;
+    }
+    .login,
+    .signup {
+        min-width: 65px;
+        min-height: 36px;
+        padding: 6px 10px;
+        font-size: 0.9rem;
+    }
+    .profile {
+        width: 42px;
+        height: 42px;
+    }
+    .cart-content {
+        grid-template-columns: 1fr;
+    }
+    .cart-summary {
+        position: static;
+        width: 100%;
+    }
+    .cart-item {
+        grid-template-columns: 100px 1fr auto;
+    }
+    .cart-item-image {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .head-box {
+        width: 92%;
+        min-height: auto;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+            "logo profile"
+            "nav nav";
+        gap: 10px;
+        padding: 10px 0;
+    }
+    .logo-container {
+        grid-area: logo;
+        width: 100%;
+    }
+    .logo-img {
+        width: 50px;
+        height: 50px;
+    }
+    .logo-title {
+        font-size: 1.5rem;
+    }
+    .nav-container {
+        grid-area: nav;
+        width: 100%;
+        justify-content: center;
+        gap: 2rem;
+        padding-top: 5px;
+    }
+    .nav-link {
+        font-size: 1rem;
+    }
+    .login-profile {
+        grid-area: profile;
+        width: auto;
+        gap: 0;
+    }
+    .login-box {
+        gap: 0.4rem;
+    }
+    .login,
+    .signup {
+        min-width: 60px;
+        min-height: 34px;
+        padding: 5px 8px;
+        font-size: 0.85rem;
+        border-radius: 8px;
+    }
+    .profile {
+        width: 42px;
+        height: 42px;
+    }
+    .gap {
+        padding: 0.7rem;
+    }
+    .cart-title {
+        width: 92%;
+        height: 45px;
+        font-size: 1.2rem;
+        border-radius: 12px;
+    }
+    .cart-container {
+        width: 92%;
+    }
+    .cart-content {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+    .cart-items {
+        width: 100%;
+    }
+    .cart-item {
+        grid-template-columns: 85px 1fr;
+        grid-template-areas:
+            "image details"
+            "image right";
+        gap: 10px 15px;
+        padding: 12px;
+        min-height: auto;
+    }
+    .cart-item-image {
+        grid-area: image;
+        width: 80px;
+        height: 80px;
+    }
+    .cart-item-details {
+        grid-area: details;
+    }
+    .cart-item-right {
+        grid-area: right;
+        min-width: auto;
+        align-items: flex-start;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        gap: 10px;
+    }
+    .cart-item-name {
+        font-size: 1.1rem;
+    }
+    .cart-item-price {
+        font-size: 0.95rem;
+    }
+    .cart-item-unit {
+        font-size: 0.85rem;
+    }
+    .quantity-box {
+        margin-top: 6px;
+    }
+    .quantity-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+    .quantity {
+        min-width: 30px;
+        font-size: 1rem;
+    }
+    .item-total {
+        font-size: 1.1rem;
+    }
+    .remove-btn {
+        font-size: 0.9rem;
+    }
+    .cart-summary {
+        padding: 18px;
+    }
+    .summary-title {
+        font-size: 1.25rem;
+        margin-bottom: 15px;
+    }
+    .summary-row {
+        font-size: 0.95rem;
+    }
+
+    .summary-total {
+        font-size: 1.2rem;
+    }
+    .checkout-btn {
+        font-size: 1rem;
+        padding: 11px;
+    }
+    .cart-empty {
+        min-height: 250px;
+        font-size: 1.3rem;
+    }
+    .shop-now {
+        padding: 7px 18px;
+        font-size: 0.95rem;
+    }
+    .footer-box {
+        min-height: 110px;
+    }
+    .footer-title {
+        font-size: 1.6rem;
+    }
+    .footer-description,
+    .footer-copyright {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .head-box {
+        width: 94%;
+    }
+    .logo-container {
+        gap: 0.5rem;
+    }
+    .logo-img {
+        width: 45px;
+        height: 45px;
+    }
+    .logo-title {
+        font-size: 1.3rem;
+    }
+    .profile {
+        width: 38px;
+        height: 38px;
+    }
+    .nav-container {
+        gap: 1.3rem;
+    }
+    .nav-link {
+        font-size: 0.9rem;
+    }
+    .login-box {
+        display: flex;
+    }
+    .login,
+    .signup {
+        min-width: 55px;
+        min-height: 32px;
+        padding: 4px 7px;
+        font-size: 0.78rem;
+    }
+    .cart-title {
+        width: 94%;
+        font-size: 1.1rem;
+    }
+    .cart-container {
+        width: 94%;
+    }
+    .cart-item {
+        grid-template-columns: 70px 1fr;
+        gap: 8px 12px;
+        padding: 10px;
+    }
+    .cart-item-image {
+        width: 65px;
+        height: 65px;
+    }
+    .cart-item-name {
+        font-size: 1rem;
+    }
+    .cart-item-price {
+        font-size: 0.85rem;
+    }
+    .cart-item-unit {
+        font-size: 0.8rem;
+    }
+    .quantity-box {
+        gap: 5px;
+    }
+    .quantity-btn {
+        width: 28px;
+        height: 28px;
+    }
+    .quantity {
+        min-width: 25px;
+        font-size: 0.95rem;
+    }
+    .cart-item-right {
+        flex-direction: row;
+        align-items: center;
+    }
+    .item-total {
+        font-size: 1rem;
+    }
+    .remove-btn {
+        font-size: 0.8rem;
+    }
+    .cart-summary {
+        padding: 15px;
+    }
+    .summary-title {
+        font-size: 1.15rem;
+    }
+    .summary-row {
+        font-size: 0.9rem;
+    }
+    .summary-total {
+        font-size: 1.1rem;
+    }
+    .checkout-btn {
+        font-size: 0.95rem;
+    }
+    .cart-empty {
+        min-height: 220px;
+        font-size: 1.15rem;
+    }
+    .footer-title {
+        font-size: 1.4rem;
+    }
+    .footer-description,
+    .footer-copyright {
+        font-size: 0.8rem;
+    }
+}
+
+
+@media (max-width: 350px) {
+
+    .logo-title {
+        font-size: 1.15rem;
+    }
+    .logo-img {
+        width: 40px;
+        height: 40px;
+    }
+    .profile {
+        width: 35px;
+        height: 35px;
+    }
+    .nav-container {
+        gap: 0.9rem;
+    }
+    .nav-link {
+        font-size: 0.82rem;
+    }
+    .login,
+    .signup {
+        min-width: 48px;
+        padding: 4px 5px;
+        font-size: 0.7rem;
+    }
+    .cart-item {
+        grid-template-columns: 60px 1fr;
+    }
+    .cart-item-image {
+        width: 55px;
+        height: 55px;
+    }
+    .cart-item-name {
+        font-size: 0.9rem;
+    }
+    .quantity-btn {
+        width: 26px;
+        height: 26px;
+    }
+    .quantity {
+        min-width: 22px;
+    }
 }

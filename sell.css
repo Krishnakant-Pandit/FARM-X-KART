@@ -280,3 +280,252 @@ body {
 .cancel-btn:active {
     transform: translateY(1px) scale(0.97);
 }
+
+@media (max-width: 768px) {
+    body {
+        padding: 25px 15px;
+        align-items: flex-start;
+    }
+
+    .sell-box {
+        width: 100%;
+        max-width: 470px;
+        padding: 28px 25px;
+        gap: 1rem;
+        border-radius: 20px;
+    }
+
+    .sell-title {
+        font-size: 1.8rem;
+    }
+
+    .sell-input {
+        gap: 0.7rem;
+    }
+
+    .input-box {
+        padding: 9px 12px;
+    }
+
+    .input,
+    .category,
+    .qty-input,
+    .qty-unit,
+    .price-input,
+    .harvest-date {
+        height: 40px;
+        font-size: 0.9rem;
+    }
+
+    .sell-description {
+        height: 85px;
+        font-size: 0.9rem;
+    }
+
+    .upload-pic {
+        font-size: 0.85rem;
+    }
+
+    .button {
+        gap: 12px;
+    }
+
+    .button a,
+    .button button {
+        height: 42px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 550px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    .sell-box {
+        width: 100%;
+        padding: 25px 18px;
+        border-radius: 18px;
+    }
+
+    .sell-title {
+        font-size: 1.65rem;
+    }
+
+    .input-title {
+        font-size: 0.85rem;
+    }
+
+    .input,
+    .category,
+    .qty-input,
+    .qty-unit,
+    .price-input,
+    .harvest-date {
+        height: 39px;
+        padding: 5px 11px;
+        font-size: 0.85rem;
+    }
+
+    .sell-description {
+        height: 85px;
+        padding: 8px 11px;
+        font-size: 0.85rem;
+    }
+
+    .upload-pic {
+        padding: 6px;
+        font-size: 0.8rem;
+    }
+
+    .quantity-box {
+        gap: 6px;
+    }
+
+    .price-box {
+        padding-left: 10px;
+    }
+
+    .currency {
+        font-size: 1rem;
+    }
+
+    .button {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .button a,
+    .button button {
+        width: 100%;
+        flex: none;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        padding: 15px 10px;
+    }
+
+    .sell-box {
+        padding: 22px 14px;
+        border-radius: 16px;
+    }
+
+    .sell-title {
+        font-size: 1.45rem;
+    }
+
+    .sell-input {
+        gap: 0.6rem;
+    }
+
+    .input-box {
+        padding: 8px 10px;
+    }
+
+    .input-title {
+        font-size: 0.8rem;
+        margin-bottom: 4px;
+    }
+
+    .input,
+    .category,
+    .qty-input,
+    .qty-unit,
+    .price-input,
+    .harvest-date {
+        height: 37px;
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+
+    .sell-description {
+        height: 80px;
+        font-size: 0.8rem;
+    }
+
+    .upload-pic {
+        font-size: 0.75rem;
+    }
+
+    .quantity-box {
+        gap: 5px;
+    }
+
+    .price-box {
+        padding-left: 9px;
+    }
+
+    .currency {
+        font-size: 0.95rem;
+    }
+
+    .button {
+        margin-top: 7px;
+        gap: 8px;
+    }
+
+    .button a,
+    .button button {
+        height: 38px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 320px) {
+    body {
+        padding: 10px 7px;
+    }
+
+    .sell-box {
+        padding: 18px 10px;
+        border-radius: 14px;
+    }
+
+    .sell-title {
+        font-size: 1.3rem;
+    }
+
+    .input-box {
+        padding: 7px 8px;
+    }
+
+    .input-title {
+        font-size: 0.75rem;
+    }
+
+    .input,
+    .category,
+    .qty-input,
+    .qty-unit,
+    .price-input,
+    .harvest-date {
+        height: 35px;
+        padding: 4px 8px;
+        font-size: 0.75rem;
+    }
+
+    .sell-description {
+        height: 75px;
+        padding: 7px 9px;
+        font-size: 0.75rem;
+    }
+
+    .upload-pic {
+        font-size: 0.7rem;
+        padding: 5px;
+    }
+
+    .currency {
+        font-size: 0.9rem;
+    }
+
+    .button a,
+    .button button {
+        height: 36px;
+        font-size: 0.8rem;
+    }
+}

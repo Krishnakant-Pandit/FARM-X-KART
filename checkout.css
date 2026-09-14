@@ -197,15 +197,24 @@ header {
 }
 
 .title-box {
-    width: 90%;
-    margin: auto;
-    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .checkout-title {
-    font-size: 2.3rem;
-    color: darkgreen;
-    font-weight: 700;
+    width: 95%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-shadow: 0 0 3px darkgreen;
+    background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%,rgba(87, 199, 133, 1) 50%,rgba(237, 221, 83, 1) 100%);
 }
 
 .checkout-container {
@@ -391,4 +400,528 @@ header {
     font-weight: 400;
     color: white;
     text-shadow: 0 0 5px darkgreen;
+}
+
+@media (max-width: 1100px) {
+
+    .head-box {
+        width: 94%;
+    }
+
+    .logo-container {
+        width: 32%;
+    }
+
+    .nav-container {
+        width: 34%;
+        gap: 1.2rem;
+    }
+
+    .login-profile {
+        width: 34%;
+        gap: 1rem;
+    }
+
+    .checkout-container {
+        width: 92%;
+        grid-template-columns: 1.4fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .checkout-box,
+    .order-box {
+        padding: 1.5rem;
+    }
+}
+
+
+@media (max-width: 850px) {
+
+    header {
+        min-height: auto;
+    }
+
+    .head-box {
+        width: 94%;
+        min-height: 75px;
+        padding: 8px 0;
+    }
+
+    .logo-container {
+        width: 30%;
+        gap: 0.6rem;
+    }
+
+    .logo-img {
+        width: 52px;
+        height: 52px;
+    }
+
+    .logo-title {
+        font-size: 1.5rem;
+    }
+
+    .nav-container {
+        width: 38%;
+        gap: 0.8rem;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+
+    .login-profile {
+        width: 32%;
+        gap: 0.7rem;
+    }
+
+    .login-box {
+        gap: 0.5rem;
+    }
+
+    .login,
+    .signup {
+        min-width: 65px;
+        min-height: 36px;
+        padding: 6px 10px;
+        font-size: 0.9rem;
+    }
+
+    .profile {
+        width: 42px;
+        height: 42px;
+    }
+
+    .checkout-title {
+        width: 94%;
+        height: 46px;
+        font-size: 1.2rem;
+    }
+
+    .checkout-container {
+        width: 94%;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .checkout-left,
+    .checkout-right {
+        width: 100%;
+    }
+
+    .order-box {
+        width: 100%;
+    }
+
+    .checkout-box,
+    .order-box {
+        padding: 1.5rem;
+    }
+
+    .order-box {
+        position: static;
+    }
+
+    .address-row {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    header {
+        min-height: auto;
+    }
+
+    .head-box {
+        width: 92%;
+        min-height: auto;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+            "logo profile"
+            "nav nav";
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .logo-container {
+        grid-area: logo;
+        width: 100%;
+    }
+
+    .logo-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .logo-title {
+        font-size: 1.5rem;
+    }
+
+    .nav-container {
+        grid-area: nav;
+        width: 100%;
+        justify-content: center;
+        gap: 2rem;
+        padding-top: 5px;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+
+    .login-profile {
+        grid-area: profile;
+        width: auto;
+        gap: 0;
+    }
+
+    .login-box {
+        gap: 0.4rem;
+    }
+
+    .login,
+    .signup {
+        min-width: 60px;
+        min-height: 34px;
+        padding: 5px 8px;
+        font-size: 0.85rem;
+        border-radius: 8px;
+    }
+
+    .profile {
+        width: 42px;
+        height: 42px;
+    }
+
+    .gap {
+        height: 20px;
+    }
+
+    .checkout-title {
+        width: 92%;
+        height: 45px;
+        font-size: 1.15rem;
+        border-radius: 12px;
+    }
+
+    .checkout-container {
+        width: 92%;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .checkout-box,
+    .order-box {
+        width: 100%;
+        padding: 18px;
+        border-radius: 15px;
+    }
+
+    .checkout-box h2,
+    .order-box h2 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .input-group {
+        margin-bottom: 0.9rem;
+    }
+
+    .input-group label {
+        font-size: 0.95rem;
+    }
+
+    .input-group input,
+    .input-group textarea {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+
+    .address-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .payment-options {
+        gap: 8px;
+    }
+
+    .payment-option {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+
+    .place-order-btn {
+        padding: 11px;
+        font-size: 1rem;
+    }
+
+    .checkout-item {
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .checkout-item-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .checkout-item-name {
+        font-size: 0.95rem;
+    }
+
+    .checkout-item-price,
+    .checkout-item-quantity {
+        font-size: 0.82rem;
+    }
+
+    .checkout-item-total {
+        font-size: 0.95rem;
+    }
+
+    .summary-line {
+        font-size: 0.95rem;
+        padding: 8px 0;
+    }
+
+    .total-line {
+        font-size: 1.15rem;
+    }
+
+    .footer-box {
+        min-height: 110px;
+        padding: 10px;
+    }
+
+    .footer-title {
+        font-size: 1.6rem;
+    }
+
+    .footer-description,
+    .footer-copyright {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .head-box {
+        width: 94%;
+    }
+
+    .logo-container {
+        gap: 0.5rem;
+    }
+
+    .logo-img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .logo-title {
+        font-size: 1.3rem;
+    }
+
+    .profile {
+        width: 38px;
+        height: 38px;
+    }
+
+    .nav-container {
+        gap: 1.3rem;
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+    }
+
+    .login,
+    .signup {
+        min-width: 55px;
+        min-height: 32px;
+        padding: 4px 7px;
+        font-size: 0.78rem;
+    }
+
+    .gap {
+        height: 15px;
+    }
+
+    .checkout-title {
+        width: 94%;
+        height: 43px;
+        font-size: 1.05rem;
+    }
+
+    .checkout-container {
+        width: 94%;
+        gap: 15px;
+    }
+
+    .checkout-box,
+    .order-box {
+        padding: 14px;
+        border-radius: 13px;
+    }
+
+    .checkout-box h2,
+    .order-box h2 {
+        font-size: 1.2rem;
+        margin-bottom: 0.9rem;
+    }
+
+    .input-group {
+        margin-bottom: 0.8rem;
+    }
+
+    .input-group label {
+        font-size: 0.9rem;
+    }
+
+    .input-group input,
+    .input-group textarea {
+        padding: 9px;
+        font-size: 0.9rem;
+        border-radius: 8px;
+    }
+
+    .payment-option {
+        padding: 9px;
+        font-size: 0.88rem;
+    }
+
+    .place-order-btn {
+        padding: 10px;
+        font-size: 0.95rem;
+        border-radius: 8px;
+    }
+
+    .checkout-item-image {
+        width: 52px;
+        height: 52px;
+    }
+
+    .checkout-item-name {
+        font-size: 0.9rem;
+    }
+
+    .checkout-item-price,
+    .checkout-item-quantity {
+        font-size: 0.78rem;
+    }
+
+    .checkout-item-total {
+        font-size: 0.9rem;
+    }
+
+    .summary-line {
+        font-size: 0.88rem;
+        padding: 7px 0;
+    }
+
+    .total-line {
+        font-size: 1.05rem;
+    }
+
+    .footer-title {
+        font-size: 1.4rem;
+    }
+
+    .footer-description,
+    .footer-copyright {
+        font-size: 0.8rem;
+    }
+}
+
+
+@media (max-width: 350px) {
+
+    .logo-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo-title {
+        font-size: 1.15rem;
+    }
+
+    .profile {
+        width: 35px;
+        height: 35px;
+    }
+
+    .nav-container {
+        gap: 0.9rem;
+    }
+
+    .nav-link {
+        font-size: 0.82rem;
+    }
+
+    .login,
+    .signup {
+        min-width: 48px;
+        min-height: 30px;
+        padding: 3px 5px;
+        font-size: 0.7rem;
+    }
+
+    .checkout-title {
+        font-size: 1rem;
+    }
+
+    .checkout-box,
+    .order-box {
+        padding: 11px;
+    }
+
+    .checkout-box h2,
+    .order-box h2 {
+        font-size: 1.1rem;
+    }
+
+    .input-group label {
+        font-size: 0.85rem;
+    }
+
+    .input-group input,
+    .input-group textarea {
+        font-size: 0.85rem;
+    }
+
+    .payment-option {
+        font-size: 0.8rem;
+    }
+
+    .checkout-item {
+        gap: 7px;
+    }
+
+    .checkout-item-image {
+        width: 45px;
+        height: 45px;
+    }
+
+    .checkout-item-name {
+        font-size: 0.82rem;
+    }
+    .checkout-item-price,
+    .checkout-item-quantity {
+        font-size: 0.72rem;
+    }
+    .checkout-item-total {
+        font-size: 0.82rem;
+    }
+    .summary-line {
+        font-size: 0.82rem;
+    }
+    .total-line {
+        font-size: 1rem;
+    }
 }
