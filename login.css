@@ -18,6 +18,33 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
+
+.admin-btn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.admin-btn a{
+    text-decoration: none;
+    border: 2px solid darkgreen;
+    color: darkgreen;
+    font-weight: 600;
+    padding: 5px 15px;
+    background-color: white;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.admin-btn a:hover{
+    background-color: darkgreen;
+    color: white;
+}
+
+.admin-btn a:active{
+    transform: scale(0.95);
+}
+
+
 .login-container {
     display: flex;
     justify-content: space-around;

@@ -1,31 +1,286 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Admin Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Farm X Kart</title>
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Ole&family=Playwrite+GB+J:ital,wght@0,100..400;1,100..400&family=Playwrite+ID:wght@100..400&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <main class="admin-page">
-        <header>
-            <h1>Admin Dashboard</h1><button id="admin-logout">Logout</button>
-        </header>
-        <section class="stats">
-            <div><b id="users-count">0</b>Users</div>
-            <div><b id="products-count">0</b>Products</div>
-            <div><b id="orders-count">0</b>Orders</div>
-            <div><b id="sales-total">₹0</b>Sales</div>
+<body id="admin-page">
+
+    <header>
+        <div class="head-box">
+
+            <div class="logo-container">
+                <img src="./images/Logo.jpeg" alt="logo" class="logo-img" loading="lazy">
+                <div class="logo-title">Farm X Kart</div>
+            </div>
+
+            <div class="nav-conatiner">
+                <a class="nav-link" href="#dashboard">Dashboard</a>
+                <a class="nav-link" href="#users">Users</a>
+                <a class="nav-link" href="#products">Products</a>
+                <a class="nav-link" href="#orders">Orders</a>
+                <a class="nav-link" href="#revenue">Revenue</a>
+            </div>
+
+            <div class="login-profile">
+                <button class="logout">Logout</button>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="gap"></div>
+
+    <main class="admin-main">
+
+        <section id="dashboard" class="admin-section">
+
+            <div class="section-title">
+                Admin Dashboard
+            </div>
+
+            <div class="admin-stats-container">
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-title">Total Users</div>
+                    <div class="admin-stat-value" id="total-users">0</div>
+                    <div class="admin-stat-description">Registered users</div>
+                </div>
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-title">Total Farmers</div>
+                    <div class="admin-stat-value" id="total-farmers">0</div>
+                    <div class="admin-stat-description">Farmer accounts</div>
+                </div>
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-title">Total Customers</div>
+                    <div class="admin-stat-value" id="total-customers">0</div>
+                    <div class="admin-stat-description">Customer accounts</div>
+                </div>
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-title">Total Products</div>
+                    <div class="admin-stat-value" id="total-products">0</div>
+                    <div class="admin-stat-description">Listed products</div>
+                </div>
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-title">Total Orders</div>
+                    <div class="admin-stat-value" id="total-orders">0</div>
+                    <div class="admin-stat-description">Customer orders</div>
+                </div>
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-title">Total Revenue</div>
+                    <div class="admin-stat-value" id="total-revenue">₹0</div>
+                    <div class="admin-stat-description">Generated revenue</div>
+                </div>
+
+            </div>
+
         </section>
-        <section class="panel">
-            <h2>Management</h2>
-            <div class="links"><a href="products.html">Products</a><a href="users.html">Users</a><a
-                    href="orders.html">Orders</a></div>
+
+        <div class="gap"></div>
+
+        <section class="admin-section" id="users">
+
+            <div class="section-title">
+                User Management
+            </div>
+
+            <div class="gap"></div>
+
+            <div class="admin-table-box">
+
+                <div class="admin-table-heading">
+                    <div>Registered Users</div>
+                    <span id="user-count">0 Users</span>
+                </div>
+
+                <div class="admin-table-scroll">
+
+                    <table class="admin-table">
+
+                        <thead>
+                            <tr>
+                                <th>S.No</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Mobile</th>
+                                <th>Gender</th>
+                                <th>Account Type</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="users-table">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
         </section>
+
+        <div class="gap"></div>
+
+        <section class="admin-section" id="products">
+
+            <div class="section-title">
+                Product Management
+            </div>
+            <div class="gap"></div>
+
+            <div class="admin-table-box">
+
+                <div class="admin-table-heading">
+                    <div>Listed Products</div>
+                    <span id="product-count">0 Products</span>
+                </div>
+
+                <div class="admin-table-scroll">
+
+                    <table class="admin-table">
+
+                        <thead>
+                            <tr>
+                                <th>S.No</th>
+                                <th>Product</th>
+                                <th>Farmer</th>
+                                <th>Category</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Listed On</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="products-table">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <div class="gap"></div>
+
+        <section class="admin-section" id="orders">
+
+            <div class="section-title">
+                Order Management
+            </div>
+            <div class="gap"></div>
+
+            <div class="admin-table-box">
+
+                <div class="admin-table-heading">
+                    <div>Customer Orders</div>
+                    <span id="order-count">0 Orders</span>
+                </div>
+
+                <div class="admin-table-scroll">
+
+                    <table class="admin-table">
+
+                        <thead>
+                            <tr>
+                                <th>S.No</th>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Items</th>
+                                <th>Payment</th>
+                                <th>Total</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="orders-table">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <div class="gap"></div>
+
+        <section class="admin-section" id="revenue">
+
+            <div class="section-title">
+                Revenue Overview
+            </div>
+            <div class="gap"></div>
+
+            <div class="admin-revenue-container">
+
+                <div class="admin-revenue-card">
+                    <div class="admin-revenue-title">
+                        Total Revenue
+                    </div>
+                    <div class="admin-revenue-value" id="revenue-total">
+                        ₹0
+                    </div>
+                </div>
+
+                <div class="admin-revenue-card">
+                    <div class="admin-revenue-title">
+                        Total Orders
+                    </div>
+                    <div class="admin-revenue-value" id="revenue-orders">
+                        0
+                    </div>
+                </div>
+
+                <div class="admin-revenue-card">
+                    <div class="admin-revenue-title">
+                        Average Order Value
+                    </div>
+                    <div class="admin-revenue-value" id="average-order">
+                        ₹0
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
-    <script src="script.js"></script>
+
+    <div class="gap"></div>
+
+    <div class="footer-box">
+        <div class="footer-tittle">
+            Farm X Kart
+        </div>
+
+        <div class="footer-description">
+            Fresh Products, Directly from Our Farmers
+        </div>
+
+        <div class="footer-copywrite">
+            © 2026 Farm X Kart. All Rights Reserved.
+        </div>
+    </div>
+
+    <script src="adminLogin.js"></script>
+
 </body>
 
 </html>
