@@ -1,0 +1,478 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Baloo Bhai 2", sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px 15px;
+
+    background-image: url("/images/login-background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.signup-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.signup-box {
+    width: 380px;
+    padding: 30px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    position: relative;
+    top: 6px;
+
+    transition:transform 0.35s ease, box-shadow 0.35s ease,background 0.35s ease;
+}
+
+.signup-box:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.signup-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.8);
+    transition:transform 0.3s ease,text-shadow 0.3s ease;
+}
+
+.signup-title:hover {
+    transform: scale(1.03);
+    text-shadow: 0 0 12px rgba(0, 255, 255, 1);
+}
+
+
+.signup-input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+
+.input {
+    width: 100%;
+    height: 42px;
+    margin-top: 10px;
+    padding: 5px 15px;
+    border-radius: 50px;
+    border: 1.5px solid rgba(255, 255, 255, 0.7);
+    outline: none;
+    background: rgba(255, 255, 255, 0.85);
+    color: #222;
+    font-size: 1rem;
+    transition:border-color 0.25s ease,box-shadow 0.25s ease,background 0.25s ease,transform 0.25s ease;
+}
+
+.input::placeholder {
+    color: #777;
+    transition: color 0.25s ease;
+}
+
+.input:hover {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: darkgreen;
+}
+
+.input:focus {
+    background: white;
+    border-color: darkgreen;
+    box-shadow:0 0 0 3px rgba(0, 100, 0, 0.15), 0 4px 10px rgba(0, 0, 0, 0.12);
+    transform: translateY(-1px);
+}
+
+.input:focus::placeholder {
+    color: transparent;
+}
+
+.input-option {
+    width: 100%;
+    margin-top: 10px;
+    padding: 5px 15px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.option-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 3px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.option label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.option-checkbox {
+    accent-color: darkgreen;
+    cursor: pointer;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #333;
+    cursor: pointer;
+}
+.terms input {
+    accent-color: darkgreen;
+    cursor: pointer;
+}
+
+.login-link {
+    width: 100%;
+    margin-top: 5px;
+    text-align: center;
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: darkblue;
+    text-shadow: 0 0 3px rgba(128, 128, 128, 0.5);
+    transition:color 0.25s ease,transform 0.25s ease,text-shadow 0.25s ease;
+}
+
+.login-link:hover {
+    color: darkgreen;
+    text-shadow: 0 0 5px rgba(0, 100, 0, 0.3);
+    transform: translateY(-1px);
+}
+
+.button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.button a,
+.button button {
+    flex: 1;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: "Baloo Bhai 2", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition:transform 0.25s ease,box-shadow 0.25s ease,background 0.25s ease,color 0.25s ease,border-color 0.25s ease;
+}
+
+.signup-btn {
+    color: white;
+    background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%,rgba(237, 221, 83, 1) 100%);
+    border: none;
+    box-shadow: 0 0 10px darkgreen;
+}
+.signup-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(0, 100, 0, 0.35);
+}
+.signup-btn:active {
+    transform: translateY(1px) scale(0.97);
+    box-shadow: 0 2px 5px rgba(0, 100, 0, 0.25);
+}
+.cancel-btn {
+    color: #333;
+    background: rgba(255, 255, 255, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+}
+.cancel-btn:hover {
+    color: #b00020;
+    background: rgba(255, 255, 255, 0.9);
+    border-color: #b00020;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+.cancel-btn:active {
+    transform: translateY(1px) scale(0.97);
+}
+@media (max-width: 768px) {
+    body {
+        padding: 20px 15px;
+        align-items: flex-start;
+    }
+
+    .signup-container {
+        padding-top: 15px;
+    }
+
+    .signup-box {
+        width: 100%;
+        max-width: 380px;
+        padding: 28px 25px;
+        gap: 0.9rem;
+        border-radius: 18px;
+    }
+
+    .signup-title {
+        font-size: 2.2rem;
+    }
+
+    .signup-input {
+        gap: 2px;
+    }
+
+    .input {
+        height: 41px;
+        font-size: 0.95rem;
+        margin-top: 9px;
+    }
+
+    .input-option {
+        padding: 5px 12px;
+    }
+
+    .option-title {
+        font-size: 0.85rem;
+    }
+
+    .option {
+        gap: 14px;
+        font-size: 0.85rem;
+    }
+
+    .terms {
+        font-size: 0.75rem;
+    }
+
+    .login-link {
+        font-size: 0.75rem;
+    }
+
+    .button {
+        gap: 12px;
+    }
+
+    .button a,
+    .button button {
+        height: 41px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 550px) {
+    body {
+        padding: 15px 10px;
+    }
+
+    .signup-container {
+        padding-top: 10px;
+    }
+
+    .signup-box {
+        width: 100%;
+        max-width: 360px;
+        padding: 25px 20px;
+        border-radius: 17px;
+    }
+
+    .signup-title {
+        font-size: 2rem;
+    }
+
+    .input {
+        height: 40px;
+        padding: 5px 13px;
+        font-size: 0.9rem;
+    }
+
+    .input-option {
+        padding: 5px 11px;
+        border-radius: 13px;
+    }
+
+    .option {
+        gap: 10px;
+        flex-wrap: wrap;
+        font-size: 0.8rem;
+    }
+
+    .option label {
+        gap: 4px;
+    }
+
+    .terms {
+        gap: 5px;
+        font-size: 0.7rem;
+    }
+
+    .login-link {
+        font-size: 0.72rem;
+    }
+
+    .button {
+        gap: 10px;
+        margin-top: 8px;
+    }
+
+    .button a,
+    .button button {
+        height: 40px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        padding: 10px 8px;
+    }
+
+    .signup-container {
+        padding-top: 5px;
+    }
+
+    .signup-box {
+        width: 100%;
+        max-width: 350px;
+        padding: 22px 16px;
+        border-radius: 16px;
+    }
+
+    .signup-title {
+        font-size: 1.8rem;
+    }
+
+    .input {
+        height: 38px;
+        padding: 5px 12px;
+        font-size: 0.85rem;
+        margin-top: 8px;
+    }
+
+    .input-option {
+        margin-top: 8px;
+        padding: 5px 9px;
+    }
+
+    .option-title {
+        font-size: 0.8rem;
+    }
+
+    .option {
+        gap: 8px;
+        font-size: 0.75rem;
+    }
+
+    .terms {
+        margin-top: 8px;
+        font-size: 0.65rem;
+    }
+
+    .login-link {
+        font-size: 0.68rem;
+    }
+
+    .button {
+        gap: 8px;
+    }
+
+    .button a,
+    .button button {
+        height: 38px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 320px) {
+    body {
+        padding: 8px 5px;
+    }
+
+    .signup-box {
+        padding: 20px 12px;
+        border-radius: 14px;
+    }
+
+    .signup-title {
+        font-size: 1.6rem;
+    }
+
+    .input {
+        height: 36px;
+        padding: 4px 10px;
+        font-size: 0.8rem;
+    }
+
+    .input-option {
+        padding: 5px 8px;
+    }
+
+    .option-title {
+        font-size: 0.75rem;
+    }
+
+    .option {
+        gap: 6px;
+        font-size: 0.7rem;
+    }
+
+    .terms {
+        font-size: 0.6rem;
+    }
+
+    .login-link {
+        font-size: 0.62rem;
+    }
+
+    .button {
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    .button a,
+    .button button {
+        width: 100%;
+        flex: none;
+        height: 36px;
+        font-size: 0.8rem;
+    }
+}

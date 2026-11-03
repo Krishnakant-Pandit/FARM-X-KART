@@ -1,0 +1,1 @@
+import{r as a,_ as e}from"./index-CwA1xfwd.js";const t={admin:()=>e(()=>import("./adminDashboard-DMMta_we.js"),[]),marketplace:()=>e(()=>import("./marketplace-BR-lTnk3.js"),[])};function i(o){a.useEffect(()=>{t[o]().catch(r=>{console.error(`Could not load ${o} page behavior:`,r)})},[o])}export{i as u};
